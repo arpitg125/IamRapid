@@ -1,0 +1,17 @@
+<div class="filter-sidebar" [class.open]="isOpen">
+  <h2>Filter </h2>
+
+  <h3>Tailored 3D printing solutions to meet specific client needs</h3>
+  <mat-checkbox *ngFor="let tech of technologies" [(ngModel)]="tech.selected">{{ tech.name }}</mat-checkbox>
+
+  <h3>Industries</h3>
+  <mat-checkbox *ngFor="let industry of industries" [(ngModel)]="industry.selected">{{ industry.name }}</mat-checkbox>
+
+  <div class="filter-actions">
+    <button mat-button (click)="applyFilters()">Apply</button>
+    <button mat-button (click)="resetFilters()">Reset All</button>
+    <button mat-icon-button (click)="close()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>

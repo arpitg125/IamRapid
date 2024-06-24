@@ -1,0 +1,12 @@
+<div class="material-card">
+  <img [src]="material.image" alt="{{ material.name }}">
+  <h2>{{ material.name }}</h2>
+  <p>{{ material.description }}</p>
+  <div class="tags">
+    <span *ngFor="let tag of material.tags">{{ tag }}</span>
+  </div>
+  <div class="colors">
+    <span *ngFor="let color of material.availableColors" [style.background]="color"></span>
+  </div>
+
+</div>
